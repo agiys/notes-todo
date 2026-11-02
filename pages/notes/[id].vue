@@ -29,6 +29,7 @@
           :value="editor.draft.title"
           placeholder="Название заметки"
           maxlength="200"
+          autocomplete="off"
           @input="editor.setTitle(($event.target as HTMLInputElement).value)"
           @blur="editor.commit()"
         />

@@ -9,7 +9,10 @@ export default defineNuxtConfig({
     head: {
       title: 'Заметки',
       htmlAttrs: { lang: 'ru' },
-      meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }]
+      meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'description', content: 'Заметки со списками задач' }
+      ]
     }
   },
   compatibilityDate: '2025-01-01'

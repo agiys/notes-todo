@@ -11,6 +11,8 @@
       ref="textInput"
       class="todo__text"
       type="text"
+      maxlength="500"
+      autocomplete="off"
       :value="todo.text"
       placeholder="Текст пункта"
       aria-label="Текст пункта"
