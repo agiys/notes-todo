@@ -1,0 +1,24 @@
+$color-bg: #f4f5f7;
+$color-surface: #ffffff;
+$color-text: #1f2430;
+$color-muted: #6b7280;
+$color-border: #dfe2e8;
+$color-primary: #3b6ef5;
+$color-primary-dark: #2a55cc;
+$color-danger: #d93b3b;
+$color-danger-dark: #b52c2c;
+$color-success: #2f9e63;
+$color-focus: rgba(59, 110, 245, 0.45);
+
+$radius: 10px;
+$shadow: 0 1px 3px rgba(20, 24, 40, 0.08), 0 4px 14px rgba(20, 24, 40, 0.05);
+$container: 960px;
+
+$bp-sm: 600px;
+$bp-md: 900px;
+
+@mixin up($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
