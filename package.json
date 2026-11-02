@@ -8,6 +8,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "typecheck": "nuxt typecheck",
+    "pretest": "nuxt prepare",
     "test": "vitest run",
     "test:watch": "vitest"
   },
