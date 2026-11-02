@@ -39,7 +39,12 @@
 
       <div class="todos">
         <h2 class="todos__title">Список задач</h2>
-        <ul v-if="editor.draft.todos.length" class="todos__list">
+        <TransitionGroup
+          v-if="editor.draft.todos.length"
+          name="list"
+          tag="ul"
+          class="todos__list todo-list"
+        >
           <TodoItem
             v-for="todo in editor.draft.todos"
             :key="todo.id"
@@ -51,7 +56,7 @@
             @enter="addTodo"
             @blur="editor.commit()"
           />
-        </ul>
+        </TransitionGroup>
         <p v-else class="todos__empty">Пунктов пока нет.</p>
         <BaseButton class="todos__add" @click="addTodo">+ Добавить пункт</BaseButton>
         <p class="todos__hint">Пункты без текста не сохраняются.</p>

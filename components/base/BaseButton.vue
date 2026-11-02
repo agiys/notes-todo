@@ -40,7 +40,11 @@ const props = withDefaults(defineProps<Props>(), {
   line-height: 1.2;
   text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.15s, border-color 0.15s, opacity 0.15s;
+  transition: background-color 0.15s, border-color 0.15s, opacity 0.15s, transform 0.12s ease;
+
+  &:active:not(:disabled) {
+    transform: scale(0.96);
+  }
 
   &--sm {
     padding: 6px 12px;

@@ -5,9 +5,9 @@
       <BaseButton variant="primary" to="/notes/new">Новая заметка</BaseButton>
     </div>
 
-    <div v-if="store.sorted.length" class="grid">
+    <TransitionGroup v-if="store.sorted.length" name="list" tag="div" class="grid">
       <NoteCard v-for="note in store.sorted" :key="note.id" :note="note" @remove="noteToDelete = $event" />
-    </div>
+    </TransitionGroup>
     <EmptyState v-else title="Заметок пока нет" text="Создайте первую заметку со списком задач.">
       <BaseButton variant="primary" to="/notes/new">Создать заметку</BaseButton>
     </EmptyState>

@@ -42,6 +42,12 @@ const hiddenCount = computed(() => Math.max(0, props.note.todos.length - MAX_PRE
   background: $color-surface;
   border-radius: $radius;
   box-shadow: $shadow;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 6px rgba(20, 24, 40, 0.1), 0 12px 28px rgba(20, 24, 40, 0.1);
+  }
 
   &__title {
     font-size: 18px;

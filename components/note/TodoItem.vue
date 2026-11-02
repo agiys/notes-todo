@@ -56,6 +56,11 @@ defineExpose({ focus: () => textInput.value?.focus() })
   background: $color-surface;
   border: 1px solid $color-border;
   border-radius: $radius;
+  transition: border-color 0.2s, background-color 0.2s;
+
+  &:focus-within {
+    border-color: $color-primary;
+  }
 
   &__check {
     flex: none;
@@ -73,6 +78,7 @@ defineExpose({ focus: () => textInput.value?.focus() })
     border: 0;
     border-bottom: 1px solid transparent;
     background: transparent;
+    transition: color 0.25s, border-color 0.2s;
 
     &:focus {
       outline: none;

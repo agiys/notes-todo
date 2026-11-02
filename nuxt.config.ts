@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   css: ['~/assets/scss/main.scss'],
   typescript: { strict: true },
   app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       title: 'Заметки',
       htmlAttrs: { lang: 'ru' },

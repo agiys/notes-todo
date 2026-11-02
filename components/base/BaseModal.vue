@@ -120,12 +120,21 @@ onBeforeUnmount(() => document.body.classList.remove('scroll-locked'))
 
 .modal-enter-active,
 .modal-leave-active {
-  transition: opacity 0.18s;
+  transition: opacity 0.2s ease;
+
+  .modal__dialog {
+    transition: transform 0.25s cubic-bezier(0.2, 0.9, 0.3, 1.2), opacity 0.2s ease;
+  }
 }
 
 .modal-enter-from,
 .modal-leave-to {
   opacity: 0;
+
+  .modal__dialog {
+    opacity: 0;
+    transform: translateY(20px) scale(0.94);
+  }
 }
 
 @media (max-width: 480px) {
